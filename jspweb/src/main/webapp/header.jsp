@@ -23,7 +23,8 @@
 		<div class="py-4"> <!-- py : 위아래 패딩(안쪽여백) -->
 			<div class="row"> <!-- row : 가로배치 -->
 				<div class="col-md-4"> <!-- 그리드[12조각중 4 ] -->
-					<a href="/jspweb/main.jsp" class="header_logo">NERDY</a>
+					<a href="/jspweb/main.jsp" id="logo_href" style=" position: fixed;z-index:9999;    top: 66px;    left: 30px;">
+				<img src="/jspweb/img/널디로고.png" alt="" id="logo"></a>
 				</div>
 				<div class="col-md-4 offset-4 d-flex justify-content-end header_topmenu"> <!-- offset 공백그리드 -->
 				

@@ -12,12 +12,14 @@
 		<div class="container">
 			<div class="row p-5">
 				<div class="col-md-4"> 
-					<h3> 널디 </h3>
-					<p>'내안의 자유 널디'</p>
+				<a href="/jspweb/main.jsp" >
+				<img src="/jspweb/img/널디로고.png" >
+				</a>
 				</div>
 				<div class="col-md-4"> 
 					<h3> ACCOUNT INFO </h3>
 					<p>
+						
 						우리 1002-946-436858 <br>
 						신한 010-4727-2959 <br>
 						카카오뱅크 12345-123-12345 <br>
