@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ezen 쇼핑몰</title>
+<title>NERDY</title>
 	<!-- 부트스트랩 css cdn -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
 	<!-- 사용자정의 css -->
@@ -23,7 +23,7 @@
 		<div class="py-4"> <!-- py : 위아래 패딩(안쪽여백) -->
 			<div class="row"> <!-- row : 가로배치 -->
 				<div class="col-md-4"> <!-- 그리드[12조각중 4 ] -->
-					<a href="/jspweb/main.jsp" class="header_logo">EZEN SHOP</a>
+					<a href="/jspweb/main.jsp" class="header_logo">NERDY</a>
 				</div>
 				<div class="col-md-4 offset-4 d-flex justify-content-end header_topmenu"> <!-- offset 공백그리드 -->
 				
@@ -51,12 +51,12 @@
 		
 		<div class="navbar navbar-expand-md navbar-light bg-white">  <!--  본메뉴  -->
 			<ul class="navbar-nav col-md-12 justify-content-between"> 
-				<li class="nav-item"> <a href="#"> BIG SIZE </a> </li>
-				<li class="nav-item"> <a href="#" style="color: #00D8FF;"> MUSCLE-FIT </a> </li>
-				<li class="nav-item"> <a href="#" style="color: #0100FF;"> 1+1 이벤트 </a> </li>
+				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> BIG SIZE </a> </li>
+				<li class="nav-item"> <a href="#" style="color: #7A2BDF;"> HOODY </a> </li>
+				<li class="nav-item"> <a href="#" style="color: #7A2BDF;"> 1+1 이벤트 </a> </li>
 				
 				<li class="nav-item dropdown"> <!-- dropdown : 드랍다운 -->
-					 <a href="#"> 아우터 </a> <!--  data-bs-toggle="dropdown" : 해당 태그를 클릭했을때 드랍다운 열기  -->
+					 <a href="#"  style="color: #7A2BDF;"> 아우터 </a> <!--  data-bs-toggle="dropdown" : 해당 태그를 클릭했을때 드랍다운 열기  -->
 					<!-- 드롭다운 -->
 					<div class="dropdown-menu">	<!--  dropdown-menu : 드랍다운 내용물  -->
 						<a class="dropdown-item" href="#"> 드랍다운 메뉴 </a>
@@ -67,14 +67,14 @@
 					</div>
 				 </li>
 				 
-				<li class="nav-item"> <a href="#"> 상의 </a> </li>
-				<li class="nav-item"> <a href="#"> 바지 </a> </li>
-				<li class="nav-item"> <a href="#"> 슈즈 </a> </li>
-				<li class="nav-item"> <a href="#"> 악세사리 </a> </li>
-				<li class="nav-item"> <a href="#"> BEST </a> </li>
-				<li class="nav-item"> <a href="/jspweb/teamchatting.jsp"> 트레이닝 </a> </li>
-				<li class="nav-item"> <a href="/jspweb/teammarble.jsp" style="color: #FFBB00;"> 모델처러입자 </a> </li>
-				<li class="nav-item"> <a href="#" style="color: #FF0000;"> 50% 할인 </a> </li>
+				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 상의 </a> </li>
+				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 바지 </a> </li>
+				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 슈즈 </a> </li>
+				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 악세사리 </a> </li>
+				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> BEST </a> </li>
+				<li class="nav-item"> <a href="/jspweb/teamchatting.jsp"  style="color: #7A2BDF;"> 트레이닝 </a> </li>
+				<li class="nav-item"> <a href="/jspweb/teammarble.jsp"  style="color: #7A2BDF;"> EVENT </a> </li>
+				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 50% 할인 </a> </li>
 				<li class="nav-item"> 
 					<input type="text" class="header_input" size="13"> 
 					<a href="#"><i class="fas fa-search"></i></a>
