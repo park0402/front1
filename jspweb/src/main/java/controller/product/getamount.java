@@ -2,8 +2,6 @@ package controller.product;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.TreeMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,16 +13,16 @@ import dao.ProductDao;
 import dto.Stock;
 
 /**
- * Servlet implementation class getstocksize
+ * Servlet implementation class getamount
  */
-@WebServlet("/product/getstocksize")
-public class getstocksize extends HttpServlet {
+@WebServlet("/product/getamount")
+public class getamount extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public getstocksize() {
+    public getamount() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,29 +31,18 @@ public class getstocksize extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		request.setCharacterEncoding("UTF-8");
-		int pno = Integer.parseInt( request.getParameter("pno") );
-		String scolor = request.getParameter("color");
-		
-		ArrayList<Stock> list = ProductDao.getProductDao().getStock(pno);
-		// 제품별 사이즈와 재고 [ 1.문자열 , 2.컬렉션 , 3.json 등 ] 
-			// LIST 컬렉션 : 중복O [ 인덱스 ] 
-			// SET 컬렉션 : 중복X  [ 인덱스X ] 
-			// MAP 컬렉션 : key(set=중복) : value => entry엔트리 
-		Map< String , String> map = new TreeMap<>();
-		for( Stock s : list  ) {
-			if( s.getScolor().equals(scolor) ) {
-				if( s.getSamount() == 0 ) {
-					map.put( s.getSsize() ,  "품절" );
-				}else {
-					map.put( s.getSsize() ,  s.getSamount()+"개" );
-				}
+		request.setCharacterEncoding("UTF-8");	// 한글 인코딩 타입 
+		int pno = Integer.parseInt( request.getParameter("pno") ); // 제품번호 요청 
+		String color = request.getParameter("color"); // 색상 요청 
+		String size = request.getParameter("size");// 사이즈 요청 
+		ArrayList<Stock> stocks =  ProductDao.getProductDao().getStock(pno); // 해당제품의 재고목록 
+		for( Stock s : stocks) { // 만약에 재고내 색상과 사이즈가 동일하면 
+			if( s.getScolor().equals(color) && s.getSsize().equals( size.trim() ) ) { // 공백문제 => 문자열.trim() 공백제거
+				response.getWriter().print( s.getSamount() ); // 해당 수량 응답->js
 			}
 		}
-		response.setCharacterEncoding("UTF-8");
-		response.getWriter().print( map );
 	}
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

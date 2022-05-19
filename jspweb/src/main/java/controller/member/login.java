@@ -58,6 +58,7 @@ public class login extends HttpServlet {
 		if( result == 1   ) { // 로그인 성공 
 			// 로그인 성공시 세션 부여  [ 세션 : 서버에 메모리 할당=>모든 페이지에서 동일한 메모리 사용 가능 ] 
 			HttpSession session = request.getSession(); // 1. Http 내장 세션 호출 [ JSP 생략 => 내장객체 ] 
+	
 			session.setAttribute("login", mid ); // 2. 세션에 값 저장 
 								// 세션명 , 데이터
 			response.sendRedirect("/jspweb/main.jsp");  // 페이지 전환

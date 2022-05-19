@@ -1,4 +1,40 @@
 
+//게시물 작성 유효성 검사 체크 
+
+	
+	$("#btitle").keyup( function(){ 
+		let btitle = $("#btitle").val(); // 해당 제목의 데이터 가져오기
+		
+		if( $("#btitle").val().length <= 1 ){
+			$("#titlecheck").html( "제목은 2글자이상만 가능합니다." );		//pass[0] = false;
+		}else{
+			$("#titlecheck").html( "사용가능한 제목입니다" ); // pass[0] = true;
+		}
+	 }); // keyup end 
+
+
+        function badwordcheck() {
+
+            var word = document.getElementById("summernote").value;
+           
+            // 금칙어 적용
+            var swearwords_arr = new Array("개자식","나쁜","씨발","대출","씨발","개새끼","멍청이");
+
+            orgword = word.toLowerCase();
+            awdrgy = 0;
+
+            while (awdrgy <=swearwords_arr.length - 1) {
+
+                if (orgword.indexOf(swearwords_arr[awdrgy]) > -1) {
+                    alert(swearwords_arr[awdrgy] + "은(는) 금지어입니다. 등록 할 수 없습니다.");
+                    return; 
+                }
+                awdrgy++;
+            }
+            return true;
+        }
+
+
  // 문서 열렸을때 실행 함수 무조건 실행
  $(document).ready( function(){
 	 $('#summernote').summernote({

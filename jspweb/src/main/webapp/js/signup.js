@@ -100,6 +100,7 @@ $( function(){  // 문서 열리면 해당 코드가 실행
 	// 전화번호 체크 
 	$("#mphone").keyup( function(){ 
 		let mphone = $("#mphone").val();
+		
 		let phonej = /^([0-9]{2,3})-([0-9]{3,4})-([0-9]{3,4})$/;
 		if( phonej.test(mphone) ){
 			$("#phonecheck").html( "사용가능한 번호 입니다." );		pass[4] = true;
