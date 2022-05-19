@@ -36,7 +36,7 @@
 					<% if( loginid != null ){ %> <!--  만약에 로그인된 상태 = 만약에 세션이 있으면 -->
 						<li> <span  class="header_topmenu"> <%=loginid %>님 </span> · </li>
 						<li> <a href="/jspweb/logout"  class="header_topmenu">로그아웃</a> · </li>
-						<li> <a href="/jspweb/member/myshopping.jsp"  class="header_topmenu">나의쇼핑</a> · </li>
+						<li> <a href="/jspweb/product/productcart.jsp"  class="header_topmenu">나의쇼핑</a> · </li>
 						
 						<!-- 로그인 id가 admin이면  -->
 						<%  if( loginid.equals("admin") ){ %>
@@ -52,35 +52,35 @@
 		
 		<div class="navbar navbar-expand-md navbar-light bg-white">  <!--  본메뉴  -->
 			<ul class="navbar-nav col-md-12 justify-content-between"> 
-				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> BIG SIZE </a> </li>
-				<li class="nav-item"> <a href="#" style="color: #7A2BDF;"> HOODY </a> </li>
-				<li class="nav-item"> <a href="#" style="color: #7A2BDF;"> 1+1 이벤트 </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> BIG SIZE </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp" style="color: #7A2BDF;"> HOODY </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp" style="color: #7A2BDF;"> 1+1 이벤트 </a> </li>
 				
 				<li class="nav-item dropdown"> <!-- dropdown : 드랍다운 -->
 					 <a href="#"  style="color: #7A2BDF;"> 아우터 </a> <!--  data-bs-toggle="dropdown" : 해당 태그를 클릭했을때 드랍다운 열기  -->
 					<!-- 드롭다운 -->
 					<div class="dropdown-menu">	<!--  dropdown-menu : 드랍다운 내용물  -->
-						<a class="dropdown-item" href="#"> 드랍다운 메뉴 </a>
-						<a class="dropdown-item" href="#"> 드랍다운 메뉴 </a>
-						<a class="dropdown-item" href="#"> 드랍다운 메뉴 </a>
-						<a class="dropdown-item" href="#"> 드랍다운 메뉴 </a>
-						<a class="dropdown-item" href="#"> 드랍다운 메뉴 </a>
+						<a class="dropdown-item" href="/jspweb/1.jsp"> 드랍다운 메뉴 </a>
+						<a class="dropdown-item" href="/jspweb/1.jsp"> 드랍다운 메뉴 </a>
+						<a class="dropdown-item" href="/jspweb/1.jsp"> 드랍다운 메뉴 </a>
+						<a class="dropdown-item" href="/jspweb/1.jsp"> 드랍다운 메뉴 </a>
+						<a class="dropdown-item" href="/jspweb/1.jsp"> 드랍다운 메뉴 </a>
 					</div>
 				 </li>
 				 
-				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 상의 </a> </li>
-				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 바지 </a> </li>
-				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 슈즈 </a> </li>
-				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 악세사리 </a> </li>
-				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> BEST </a> </li>
-				<li class="nav-item"> <a href="/jspweb/teamchatting.jsp"  style="color: #7A2BDF;"> 트레이닝 </a> </li>
-				<li class="nav-item"> <a href="/jspweb/teammarble.jsp"  style="color: #7A2BDF;"> EVENT </a> </li>
-				<li class="nav-item"> <a href="#"  style="color: #7A2BDF;"> 50% 할인 </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> 상의 </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> 바지 </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> 슈즈 </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> 악세사리 </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> BEST </a> </li>
+				<li class="nav-item"> <a href="/jspweb/teamchatting.jsp"  style="color: #7A2BDF;"> 고객센터채팅 </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> EVENT </a> </li>
+				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> 50% 할인 </a> </li>
 				<li class="nav-item"> 
 					<input type="text" class="header_input" size="13"> 
 					<a href="#"><i class="fas fa-search"></i></a>
 				</li>
-				<li class="nav-item"> <a href="#">장바구니<span class="shoppingbox">3</span></a></li>
+				<li class="nav-item"> <a href="/jspweb/product/productcart.jsp">장바구니<span class="shoppingbox">3</span></a></li>
 			</ul>
 		</div> <!-- 본 메뉴 끝 -->
 		

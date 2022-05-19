@@ -10,42 +10,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 </head>
 <body>
-
 	<%@include file = "header.jsp" %>
-	<div class="container">
-				<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-		  <div class="carousel-inner">
-		    <div class="carousel-item active">
-		      <img src="img/널디1.jpg" class="d-block w-100" alt="...">
-		    </div>
-		    <div class="carousel-item">
-		      <img src="img/널디2.jpg" class="d-block w-100" alt="...">
-		    </div>
-		    <div class="carousel-item">
-		      <img src="img/널디1.jpg" class="d-block w-100" alt="...">
-		    </div>
-		  </div>
-		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		    <span class="visually-hidden">Previous</span>
-		  </button>
-		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		    <span class="visually-hidden">Next</span>
-		  </button>
-</div>
-		<div class="row adbox"> <!-- 광고 / 이벤트 -->
-			<div class="col-md-6">
-				<img alt="" src="img/mainad1.gif">
-			</div>
-			<div class="col-md-6">
-				<img alt="" src="img/mainad2.jpg">
-			</div>
-		</div>
-		<div class="main_box">	<!--베스 트-->
-			<h6 class="main_title"> BEST </h6>
+		<div class="main_box">	<!--베스트-->
+			<h6 class="main_title"> TODAY BEST </h6>
 			<div class="row">
 				<div class="col-md-3 best_box">
 					<img alt="" src="img/널디베스트1.jpg">
@@ -62,7 +32,7 @@
 			</div>
 		</div>
 		<div class="main_box"> <!--  신상품 -->
-			<h6 class="main_title"> NEW ARRIVAL </h6>
+			<h6 class="main_title"> 널디ZONE </h6>
 			
 			<div class="row">
 			<%
@@ -106,11 +76,8 @@
 			<%} %>
 			</div>
 		</div>
-		<div>	<!-- 실시간 구매후기 -->
-			
-		</div>
-	</div>
-	<%@include file = "footer.jsp" %>
+		
+	<%@include file = "footer.jsp" %>	
 
 </body>
 </html>
