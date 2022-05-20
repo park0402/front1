@@ -27,6 +27,7 @@ function send(){
 	let nicname = $("#nicname").val();
 	let content = $("#content").val();
 	let ip = $("#ip").html();
+	
 	$.ajax({ 
 		url : "send",
 		data : { "nicname" : nicname , "content" : content , "ip" : ip  },

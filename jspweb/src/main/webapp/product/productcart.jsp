@@ -50,7 +50,7 @@
 				</div>
 				<div class="col-sm-3 ">
 				<div>
-					<a href="/jspweb/main.jsp">
+					<a href="/jspweb/product/orderpay.jsp">
 					<button style="background-color:#9201FF; color:white;" class="form-control py-4">구매하기</button>
 					</a>
 				</div>
