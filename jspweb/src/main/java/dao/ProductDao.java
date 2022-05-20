@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -163,12 +164,14 @@ public class ProductDao extends Dao {
 		}catch (Exception e) { System.out.println( e );} return false;
 	}
 //////////////////////////장바구니/////////////////////////////////////////
+	// 장바구니 등록 메소드 
 	public boolean savecart( Cart cart ) {
 		try {
 			String sql = "select cartno from cart where sno = "+cart.getSno()+" and mno = "+cart.getMno();
 			ps = con.prepareStatement(sql); rs=ps.executeQuery();
-			if( rs.next() ) { // 1. 장바구니내 동일한 제품이 존재하면 수량 업데이트 처리
+			if( rs.next() ) { // 1. 장바구니내 동일한 제품이 존재하면 수량/가격 업데이트 처리
 				sql = "update cart set samount = samount + "+cart.getSamount()+
+								" , totalprice = totalprice + " + cart.getTotalprice() +
 						" where cartno = " + rs.getInt(1);
 				ps = con.prepareStatement(sql);	ps.executeUpdate(); return true;
 				
@@ -180,7 +183,6 @@ public class ProductDao extends Dao {
 				ps.setInt( 3 ,  cart.getSno() );
 				ps.setInt( 4 ,  cart.getMno() ); ps.executeUpdate(); return true;
 			}
-		
 		}catch (Exception e) { System.out.println( e ); } return false; 
 	}
 	// 장바구니 출력 메소드 [  
@@ -190,17 +192,17 @@ public class ProductDao extends Dao {
 				+ "	A.cartno as 장바구니번호 , "
 				+ "    A.samount as 구매수량 , "
 				+ "    A.totalprice as 총가격 , "
-				+ "    B.scolor as 색상 , "			
+				+ "    B.scolor as 색상 ,  "
 				+ "    B.ssize as 사이즈 , "
-				+ "    B.pno as 제품번호 "
-				+ "    C.pname as 제품명 "
+				+ "    B.pno as 제품번호 ,	 "
+				+ "    C.pname as 제품명 , "
 				+ "    C.pimg as 제품이미지 "
 				+ "from cart A "
 				+ "join stock B "
 				+ "on A.sno = B.sno "
 				+ "join product C "
-				+ "on B.pno = C.pno "				
-				+ "where A.mno = " + mno;
+				+ "on B.pno = C.pno "
+				+ "where A.mno ="+mno;
 		try {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
@@ -214,7 +216,7 @@ public class ProductDao extends Dao {
 				object.put( "ssize" , rs.getString(5) );
 				object.put( "pno" , rs.getInt(6) );
 				object.put( "pname" , rs.getString(7) );
-				object.put( "pimg" , rs.getInt(8) );
+				object.put( "pimg" , rs.getString(8) );
 				// 하나씩 json객체를 json배열에 담기 
 				jsonArray.put( object );
 			}
@@ -222,6 +224,18 @@ public class ProductDao extends Dao {
 		}catch (Exception e) { System.out.println( e );}  return null; 
 		
 	}
+
+	//장바구니 개별 수정 
+	public boolean deletecart() {
+		
+		
+		return false;}
+	
+	
+	//장바구니 전체 삭제
+	public boolean deletecartall() {
+		
+		
+		return false;}
+		
 }
-
-

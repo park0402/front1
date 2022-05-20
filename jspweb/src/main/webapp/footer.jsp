@@ -11,12 +11,12 @@
 	<div class="bg-light text-dark">
 		<div class="container">
 			<div class="row p-5">
-				<div class="col-md-4"> 
+				<div class="col-md-1"> 
 				<a href="/jspweb/main.jsp" >
 				<img src="/jspweb/img/널디로고.png" >
 				</a>
 				</div>
-				<div class="col-md-4"> 
+				<div class="col-md-5 "> 
 					<h3> ACCOUNT INFO </h3>
 					<p>
 						
@@ -26,7 +26,7 @@
 						예금주: 박영근
 					</p>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-5 ">
 					
 					<a href="https://redroot0402.tistory.com/"> <i class="fab fa-google fa-3x"></i> </a>	
 					<a href="https://www.instagram.com/0402_park/"> <i class="fab fa-instagram fa-3x"></i> </a>	
