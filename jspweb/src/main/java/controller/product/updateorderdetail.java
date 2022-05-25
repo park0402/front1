@@ -9,17 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.ProductDao;
 
-/**
- * Servlet implementation class deletecart
- */
-@WebServlet("/product/deletecart")
-public class deletecart extends HttpServlet {
+
+@WebServlet("/product/updateorderdetail")
+public class updateorderdetail extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public deletecart() {
+    public updateorderdetail() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,8 +26,15 @@ public class deletecart extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int cartno = Integer.parseInt(request.getParameter("cartno") );
-		ProductDao.getProductDao().deletecart(cartno);
+		int active = Integer.parseInt(request.getParameter("active"));
+		int orderdetailno= Integer.parseInt(request.getParameter("orderdetailno"));
+		
+		if(ProductDao.getProductDao().cancelorder(orderdetailno,active)) {
+			response.getWriter().print(1);
+		}else {
+			response.getWriter().print(2);
+		}
+	
 	}
 
 	/**

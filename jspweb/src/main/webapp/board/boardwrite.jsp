@@ -27,8 +27,9 @@
 			
 			<textarea name="bcontent" id="summernote"></textarea>
 			첨부파일 : <input type="file" name="bfile"> <br>
-			
-			<button type="button" onclick="badwordcheck()" >등록</button><input type="reset" value="취소">
+			<input type="submit" value="등록"><input type="reset" value="취소">
+		<!-- 	<button type="button" onclick="badwordcheck()" >등록</button><input type="reset" value="취소">
+		 -->
 		</form>
 	</div>
 	

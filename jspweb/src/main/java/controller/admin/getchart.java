@@ -1,4 +1,4 @@
-package controller.product;
+package controller.admin;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,19 +7,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONArray;
+
 import dao.ProductDao;
 
 /**
- * Servlet implementation class deletecart
+ * Servlet implementation class getchart
  */
-@WebServlet("/product/deletecart")
-public class deletecart extends HttpServlet {
+@WebServlet("/admin/getchart")
+public class getchart extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public deletecart() {
+    public getchart() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,8 +30,11 @@ public class deletecart extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int cartno = Integer.parseInt(request.getParameter("cartno") );
-		ProductDao.getProductDao().deletecart(cartno);
+		JSONArray jsonArray = ProductDao.getProductDao().getchart();
+		ProductDao.getProductDao().getchart();
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("application/json");
+		response.getWriter().print(jsonArray);
 	}
 
 	/**

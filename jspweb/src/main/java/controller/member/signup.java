@@ -13,7 +13,7 @@ import dto.Member;
 /**
  * Servlet implementation class signup
  */
-@WebServlet("/signup")
+@WebServlet("/signup")//url을 만드는것임 
 public class signup extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
