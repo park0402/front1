@@ -5,6 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 <title>Insert title here</title>
 
 	<style type="text/css">
@@ -13,7 +15,7 @@
 			background-color : yellow;
 			border-radius: 10px;
 			padding: 10px;
-			display: inline-block
+			display: inline-block;
 		}
 		.box{
 			margin: 20px;
@@ -61,7 +63,7 @@
 			
 			<form id="uploadForm" class="row">
 				<div class="col-md-9">
-					<input  class="form-control" type="file" name="file" id="file" />
+					<input  class="form-control" type="file" name="file" id="file">
 				</div>
 				<div class="col-md-3">
 					 <button  class="form-control" type="button" id="uploadBtn">사진전송</button>
@@ -78,16 +80,4 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 

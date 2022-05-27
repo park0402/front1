@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>NERDY</title>
 	<!-- 부트스트랩 css cdn -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
@@ -74,7 +75,7 @@
 				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> 악세사리 </a> </li>
 				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> BEST </a> </li>
 				<li class="nav-item"> <a href="/jspweb/teamchatting.jsp"  style="color: #7A2BDF;"> 고객센터채팅 </a> </li>
-				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> EVENT </a> </li>
+				<li class="nav-item"> <a href="/jspweb/board/chatting.jsp"  style="color: #7A2BDF;"> 자유채팅 </a> </li>
 				<li class="nav-item"> <a href="/jspweb/1.jsp"  style="color: #7A2BDF;"> 50% 할인 </a> </li>
 				<li class="nav-item"> 
 					<input type="text" class="header_input" size="13"> 

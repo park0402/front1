@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 <title>Insert title here</title>
 
 	<!-- 사용자정의 css --> <link href="/jspweb/css/productadd.css" rel="stylesheet"> 	

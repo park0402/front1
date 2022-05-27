@@ -38,6 +38,7 @@ function send(){
 	});
 }
 
+
 /* 특정 시간만큼 반복되는 함수 */
 $(function() {
 	timer = setInterval( function () {

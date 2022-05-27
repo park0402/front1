@@ -4,7 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 <title>Insert title here</title>
+
 </head>
 	
 	<%@include file = "../header.jsp" %>

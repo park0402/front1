@@ -4,7 +4,9 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 	<!-- 게시판api( 썸머노트) css cdn -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">

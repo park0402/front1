@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 <title>Insert title here</title>
 	<!-- 부트스트랩 css cdn -->  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
 	<!-- 사용자정의 css --> <link href="/jspweb/css/main.css" rel="stylesheet"> 	
@@ -39,7 +41,18 @@
 
 	<!-- 부트스트랩 js cdn --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- jquery 최신 cdn --><script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<!-- 사용자정의 js --><script src="/jspweb/js/dashboard.js" type="text/javascript"></script>
+	
+	<!-- amchart api cdn  -->
+	<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/locales/de_DE.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/geodata/germanyLow.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/fonts/notosans-sc.js"></script>
+	
+	<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+	
+	<!-- 사용자정의 js --><script src="/jspweb/js/dashboard.js" type="text/javascript"></script>
 	<!-- 사용자정의 js --><script src="/jspweb/js/main.js" type="text/javascript"></script>
 	
 </body>
