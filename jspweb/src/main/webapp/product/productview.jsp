@@ -12,6 +12,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 	<!--사용자정의 css 호출-->
 	<link rel="stylesheet" href="/jspweb/css/productview.css">
 </head>

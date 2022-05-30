@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 	<link href="/jspweb/css/productcart.css" rel="stylesheet">
 </head>
 <body>

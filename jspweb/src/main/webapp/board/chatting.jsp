@@ -4,8 +4,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
 <title>Insert title here</title>
 
 	 <!-- css --><link href="/jspweb/css/chatting.css" rel="stylesheet">
@@ -23,32 +21,8 @@
 				<div class="col-sm-4">		<!-- 접속자 목록 표시 구역  -->
 					<h5 class="enter_title"> 접속자 목록 </h5>
 					
-					<div class="row p-2"> <!-- 접속자 정보 표시 구역 = js -->
-						<div class="col-sm-4"> <!-- 프로필 이미지 표시 구역 -->
-							<img alt="" src="../img/피카츄.jpg" class="rounded-circle" width="100%" >
-						</div>
-						
-						<div class="col-sm-8"> <!-- 접속자 이름 , 기능  -->
-							<div class="member_name"> 피카츄 </div>
-							<div class="btnbox">
-								<span > 귓말 </span>
-								<span > 친추 </span>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row p-2"> <!-- 접속자 정보 표시 구역 = js -->
-						<div class="col-sm-4"> <!-- 프로필 이미지 표시 구역 -->
-							<img alt="" src="../img/꼬부기.jpg" class="rounded-circle" width="100%" >
-						</div>
-						
-						<div class="col-sm-8"> <!-- 접속자 이름 , 기능  -->
-							<div class="member_name"> 꼬부기 </div>
-							<div class="btnbox">
-								<span > 귓말 </span>
-								<span > 친추 </span>
-							</div>
-						</div>
+					<div id="enterlist">  
+						<!-- 접속된 정보 표시 -->
 					</div>
 					
 				</div>
@@ -95,18 +69,18 @@
 						</div>
 						
 						<div class="alarm">				알람 메시지 구역
-							<span> 꼬부기 님이 입장 하셨습니다. </span>
+							<span> 강호동 님이 입장 하셨습니다. </span>
 						</div>
 						
 						
 						<div class="row g-0 my-3">    받을때 구역  g-0 : div간 여백제거 
 							<div class="col-sm-1 mx-2">
-								<img alt="" src="../img/꼬부기.jpg" class="rounded-circle" width="100%" >
+								<img alt="" src="../img/프로필2.png" class="rounded-circle" width="100%" >
 							</div>
 							
 							<div class="col-sm-9">
 								<div class="recontent">	  받을때 메시지 구역
-									<div class="member_name"> 꼬부기 </div>
+									<div class="member_name"> 강호동 </div>
 									<span class="content"> 안녕하세요 </span>
 									<span class="date"> 오전 10:07 </span>
 								</div>
@@ -118,3 +92,4 @@
 
 </body>
 </html>
+
