@@ -136,6 +136,7 @@ public class MemberDao extends Dao {
 		catch (Exception e) {} return null;
 	}
 	
+	
 }
 
 

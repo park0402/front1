@@ -62,7 +62,7 @@
 					<!-- 드롭다운 -->
 					<div class="dropdown-menu">	<!--  dropdown-menu : 드랍다운 내용물  -->
 						<a class="dropdown-item" href="/jspweb/board/안산시약국.jsp"> 드랍다운 메뉴 </a>
-						<a class="dropdown-item" href="/jspweb/1.jsp"> 드랍다운 메뉴 </a>
+						<a class="dropdown-item" href="/jspweb/vote.jsp"> 드랍다운 메뉴 </a>
 						<a class="dropdown-item" href="/jspweb/1.jsp"> 드랍다운 메뉴 </a>
 						<a class="dropdown-item" href="/jspweb/1.jsp"> 드랍다운 메뉴 </a>
 						<a class="dropdown-item" href="/jspweb/1.jsp"> 드랍다운 메뉴 </a>

@@ -1,14 +1,15 @@
-
+$("#map").css("display","block");
 
 $( function(){ 
-	alert("알고싶은 약국의 주소를 클릭하면 해당약국의 위치를 표시해줍니다")
+	alert("알고싶은 약국의 주소를 클W릭하면 해당약국의 위치를 표시해줍니다")
+		
 	map();
 	
 	});
 function map( 주소 , 약국명 , 영업여부 ){ 
 	
 	alert( 영업여부 );
-	//$("#map").css("display","block");
+
 		
 
  	// 1. 해당 div에 지도 표시 

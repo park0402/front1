@@ -46,7 +46,7 @@
 	</form>
 	
 	<!-- 카카오 지도 표시 div -->
-	<div id="map" style="width:100%;height:250px;   border:solid 1px red; " ></div>
+	<div id="map" style="width:100%; height:250px;   border:solid 1px red; " ></div>
 	
 	<table class="table table-hover">
 		<tr>

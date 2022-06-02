@@ -414,4 +414,25 @@ public class ProductDao extends Dao {
 		}catch (Exception e) {} return null;
 		
 	}
+	
+	public int like( int pno , int mno ) {
+		try {
+			// 1. 검색  	제품번호와 회원번호가 동일하면 
+			String sql = "select plikeno from plike where pno="+pno+" and mno="+mno;
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			if( rs.next() ) { // 2. 만약에 존재하면 삭제처리 
+				sql = "delete from plike where plikeno = "+rs.getInt(1);
+				ps = con.prepareStatement(sql); ps.executeUpdate();
+				return 2; // 삭제 
+			}else { 	// 3. 만약에 존재하지 않으면 등록처리 
+				sql = "insert into plike( pno , mno )values( "+pno+","+mno+" ) ";
+				ps = con.prepareStatement(sql); ps.executeUpdate();
+				return 1; // 등록 
+			}
+		}catch (Exception e) { System.out.println(e); } return 3; // DB오류 
+	}
+	
+	
+
 }

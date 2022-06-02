@@ -9,7 +9,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+	<style type="text/css">
+.search { position:absolute;z-index:1000;top:20px;left:20px; }
+.search #address { width:150px;height:20px;line-height:20px;border:solid 1px #555;padding:5px;font-size:12px;box-sizing:content-box; }
+.search #submit { height:30px;line-height:30px;padding:0 10px;font-size:12px;border:solid 1px #555;border-radius:3px;cursor:pointer;box-sizing:content-box; }
+</style>
 
 <title>Insert title here</title>
 </head>
@@ -33,7 +38,7 @@
 			Board board =  BoardDao.getBoardDao().getboard(bno); 			// 게시물번호로 게시물 dto 가져오기 
 		%>
 	
-	
+		
 		<h4 class="boardview_title"><%=board.getBtitle() %></h4>
 		
 		<table class="table"> <!-- table : 부스트랩 테이블 클래스 -->
@@ -43,13 +48,27 @@
 				<td width="25%">작성일  <%=board.getBdate() %></td>  
 				<td width="25%">조회수  <%=board.getBview() %></td> 
 			</tr>
+			
 			<tr> 
 				<td colspan="4"> <!-- colspan : 열 병합 // rowspan : 행 병합  -->
 					<div class="boardview_content">	
 						<%=board.getBcontent() %>
+			<div id="wrap" class="section">
+		  
+		  
+		    <div id="map" style="width:40%;  height:400px; margin:auto;">
+		        <div class="search" style="">
+		            <input id="address" type="text" placeholder="검색할 주소" value="<%=board.getBtitle() %>" />
+		            <input id="submit" type="button" value="주소 검색" />
+		        </div>
+		    </div>
+		    <code id="snippet" class="snippet"></code>
+		</div>
+						
 					</div>
 				</td> 
 			</tr>
+
 			
 			<% if( board.getBfile() == null ){ // 첨부파일이 없을경우 %> 
 				<tr> <td colspan="4"> 첨부파일 :  - </td> </tr> <!-- 첨부파일 다운로드 -->
@@ -58,7 +77,11 @@
 					<%=board.getBfile() %></a> </td> </tr> <!-- 첨부파일 다운로드 -->
 			<% } %>
 			
+			
+
+			
 		</table>
+		
  <!----------------------------------- 게시물 삭제/수정/목록 버튼 구역 ------------------------------------------------->		
 		<div class="row">
 		<%
@@ -141,6 +164,8 @@
 		
 	</div>
 	<script src="/jspweb/js/board.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tj0tvo35is&submodules=geocoder"></script>
+	<script type="text/javascript" src="/jspweb/js/naver.js"></script>
 	
 	<%@include file ="../footer.jsp" %>
 
